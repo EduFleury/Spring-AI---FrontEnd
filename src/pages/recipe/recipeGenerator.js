@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import api from "../../services/api";
+import ReactMarkdown from "react-markdown";
 
 
 // http://localhost:8080/ai/recipe-creator?ingredients=rice, beans, salad, meat&cuisine=brazillian&dietaryRestrictions=gluten
@@ -58,7 +59,7 @@ function RecipeGenerator(){
 
             <button onClick={askAi}>Generate Recipe</button>
             <div className="output">
-                <p>{chatResponse}</p>
+                <ReactMarkdown>{chatResponse}</ReactMarkdown>
             </div>
         </div>
     );

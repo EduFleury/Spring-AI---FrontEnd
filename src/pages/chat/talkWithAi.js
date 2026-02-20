@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import api from "../../services/api";
+import ReactMarkdown from "react-markdown";
 
 function TalkWithAi(){
 
@@ -37,7 +38,7 @@ function TalkWithAi(){
 
             <button onClick={askAi}>Ask ai</button>
             <div className="output">
-                <p>{chatResponse}</p>
+                <ReactMarkdown>{chatResponse}</ReactMarkdown>
             </div>
         </div>
     );
